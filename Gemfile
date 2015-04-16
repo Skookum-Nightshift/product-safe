@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "2.2.0"
 
-# gem activeadmin, github: "activeadmin"
+gem "activeadmin", github: "activeadmin"
 gem "autoprefixer-rails"
 gem "bootstrap-sass"
 gem "bower-rails"
