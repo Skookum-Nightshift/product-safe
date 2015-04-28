@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :items
+
   resources :collections
 
   get '*any', to: 'pages#not_found'
