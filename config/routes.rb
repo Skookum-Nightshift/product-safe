@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :collections
+
   get '*any', to: 'pages#not_found'
   root 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
