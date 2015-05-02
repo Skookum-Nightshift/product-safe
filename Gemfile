@@ -1,6 +1,11 @@
 source "https://rubygems.org"
 ruby "2.2.0"
 
+gem 'vacuum'
+gem 'multi_xml', '~> 0.5.5'
+gem 'jeff', '~> 1.3.0'
+gem 'appraisal', '~> 2.0.1'
+gem 'vcr', '~> 2.9.3'
 gem "activeadmin", github: "activeadmin"
 gem "autoprefixer-rails"
 gem "bootstrap-sass"
