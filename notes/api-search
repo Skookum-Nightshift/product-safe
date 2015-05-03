@@ -1,0 +1,54 @@
+{"OperationRequest"=>
+  {"HTTPHeaders"=>
+    {"Header"=>
+      {"Name"=>"UserAgent",
+       "Value"=>"Jeff/1.3.0 (Language=Ruby; EQHinsons-MacBook-Pro.local)"}},
+   "RequestId"=>"40a0cecb-3f22-4ee4-87f1-f83528e2b2ba",
+   "Arguments"=>
+    {"Argument"=>
+      [{"Name"=>"AWSAccessKeyId", "Value"=>"AKIAIDRJROQZPUOF74TA"},
+       {"Name"=>"AssociateTag", "Value"=>"tag"},
+       {"Name"=>"ItemId", "Value"=>"0679753354"},
+       {"Name"=>"Operation", "Value"=>"ItemLookup"},
+       {"Name"=>"Service", "Value"=>"AWSECommerceService"},
+       {"Name"=>"SignatureMethod", "Value"=>"HmacSHA256"},
+       {"Name"=>"SignatureVersion", "Value"=>"2"},
+       {"Name"=>"Timestamp", "Value"=>"2015-05-02T16:24:39Z"},
+       {"Name"=>"Version", "Value"=>"2011-08-01"},
+       {"Name"=>"Signature",
+        "Value"=>"z4yi2gWgrA+wg1MN7S2jyHT7+w3TFUx8xTbZiCuNkrw="}]},
+   "RequestProcessingTime"=>"0.0076870000000000"},
+ "Items"=>
+  {"Request"=>
+    {"IsValid"=>"True",
+     "ItemLookupRequest"=>
+      {"IdType"=>"ASIN",
+       "ItemId"=>"0679753354",
+       "ResponseGroup"=>"Small",
+       "VariationPage"=>"All"}},
+   "Item"=>
+    {"ASIN"=>"0679753354",
+     "DetailPageURL"=>
+      "http://www.amazon.com/The-Order-Things-Archaeology-Sciences/dp/0679753354%3FSubscriptionId%3DAKIAIDRJROQZPUOF74TA%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0679753354",
+     "ItemLinks"=>
+      {"ItemLink"=>
+        [{"Description"=>"Technical Details",
+          "URL"=>
+           "http://www.amazon.com/The-Order-Things-Archaeology-Sciences/dp/tech-data/0679753354%3FSubscriptionId%3DAKIAIDRJROQZPUOF74TA%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0679753354"},
+         {"Description"=>"Add To Baby Registry",
+          "URL"=>
+           "http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D0679753354%26SubscriptionId%3DAKIAIDRJROQZPUOF74TA%26tag%3Dtag%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D0679753354"},
+         {"Description"=>"Add To Wedding Registry",
+          "URL"=>
+           "http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D0679753354%26SubscriptionId%3DAKIAIDRJROQZPUOF74TA%26tag%3Dtag%26linkCode%3Dxm2%2}]
+
+r["ItemLookupResponse"]["Items"]["Request"]["IsValid"] == "True"
+r["ItemLookupResponse"]["Items"]["Request"]["ItemLookupRequest"]
+
+response = request.item_lookup(
+  query: {
+    'ItemId' => '076243631X',
+    'IdType' => 'ISBN',
+    'SearchIndex' => 'All'
+  }
+)
