@@ -1,15 +1,15 @@
 var SideBar = React.createClass({
   render: function(){
     return (
-        <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+        <div className="col-sm-3 col-md-2" role="navigation">
            
-            <ul class="nav nav-sidebar">
+            <ul className="nav nav-sidebar">
               <NavItem />
             </ul>
-            <ul class="nav nav-sidebar">
+            <ul className="nav nav-sidebar">
               <NavItem />
             </ul>
-            <ul class="nav nav-sidebar">
+            <ul className="nav nav-sidebar">
               <NavItem />
             </ul>
           

@@ -1,10 +1,9 @@
 var MySafe = React.createClass({
   render: function(){
     return (
-      <div className="mySafe">
+      <div className="row mySafe">
         <h2>SideBar:</h2>
         <SideBar />
-        <CollectionHeader />
         <CollectionPage />
       </div>
       )

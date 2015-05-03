@@ -1,8 +1,11 @@
 var CollectionPage = React.createClass({
   render: function(){
     return (
-        <div className="collectionPage">
-          This is the Collection Page.
+        <div className="col-sm-9 col-md-10 collectionPage">
+          <div className="row">
+            <CollectionHeader />
+            <CollectionBody />
+          </div>
         </div>
       )
   }
