@@ -1,8 +1,9 @@
 var CollectionBody = React.createClass({
   render: function(){
+    var items = this.props.items;
     return (
         <div className="container collectionBody">
-          <CollectionRow />
+          <CollectionRow items={items}/>
         </div>
       )
   }

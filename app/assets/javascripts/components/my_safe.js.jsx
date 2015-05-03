@@ -1,10 +1,11 @@
 var MySafe = React.createClass({
   render: function(){
+    var items = this.props.items;
     return (
       <div className="row mySafe">
         <h2>SideBar:</h2>
         <SideBar />
-        <CollectionPage />
+        <CollectionPage items={items} />
       </div>
       )
   }

@@ -10,13 +10,14 @@ class SearchController < ApplicationController
       associate_tag: ENV["AWS_ASSOCIATE_TAG"]
     )
 
-    results = api_request.item_search(
+    response = request.item_lookup(
       query: {
-        'Keywords' => params[:keywords]
+        'ItemId' => '#{@item.barcode}',
+        'IdType' => 'ISBN',
+        'SearchIndex' => 'All'
       }
     )
 
-    binding.pry
     respond_with results.as_json
   end
 end

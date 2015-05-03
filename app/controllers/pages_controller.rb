@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   after_action :allow_iframe
 
   def index
+    @items = Item.all
+    @item = Item.new
   end
 
   def not_found
