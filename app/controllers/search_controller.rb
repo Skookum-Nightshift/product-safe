@@ -18,8 +18,10 @@ class SearchController < ApplicationController
       }
     )
 
+    if response.has_key?("Title")
+      item.name = response.to_h["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Title"]
+    elsif response.has_key?("")
 
-    response.to_h["ItemLookupResponse"]["Items"]["Request"]["IsValid"]
-
+      
   end
 end
