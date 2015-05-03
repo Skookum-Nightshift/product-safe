@@ -11,4 +11,5 @@ class ApplicationController < ActionController::Base
     associate_tag: 'tag'
    )
 
+
 end
