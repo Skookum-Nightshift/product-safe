@@ -19,7 +19,10 @@ h2, .h2{
 .item {
   margin: 8px;
   padding: 0;
-  max-height: 210px;
+  height: 210px;
+  background: #fff;
+  overflow:hidden;
+
 }
 
 .border {
@@ -87,11 +90,42 @@ background: none;
 border: none;
 border-bottom: 1px solid white;
 color: white !important;
-text-align:right;
+float: right;
 outline:none;
 }
 
 input:focus input:visited{
   border:none;
   outline:none;
+}
+
+.collectionHeader span{
+  color: white;
+  font-size: 31px;
+
+}
+
+.collectionHeader{
+  max-width: 90%;
+
+}
+
+.expirationFlag{
+  background: #66bb6a;
+  color: white;
+}
+
+.expirationFlag a{
+  color: white;
+
+}
+
+
+.nav-sidebar {
+background: #259af7;
+color: white;
+}
+
+.nav-sidebar a{
+  color: white;
 }
