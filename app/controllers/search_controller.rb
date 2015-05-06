@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   respond_to :json
 
-  def item_search(item)
+  def item_search
     request = Vacuum.new
 
     request.configure(
@@ -12,13 +12,12 @@ class SearchController < ApplicationController
 
     response = request.item_lookup(
       query: {
-        'ItemId' => "#{item.barcode}",
+        'ItemId' => params[:item_id],
         'IdType' => 'ISBN',
         'SearchIndex' => 'All'
       }
     )
-
-    item.name = response.to_h["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Title"]
+    
 
       
   end

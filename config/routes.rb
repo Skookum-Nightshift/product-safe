@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :collections
 
-  get '/search', to: 'search#item_search'
+  get 'search/item_search', to: 'search#item_search'
 
   get '*any', to: 'pages#not_found'
   root 'pages#index'

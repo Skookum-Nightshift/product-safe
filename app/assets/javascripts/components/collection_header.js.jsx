@@ -6,7 +6,7 @@ var CollectionHeader = React.createClass({
             <span>My Collection</span>
           </div>
           <div className="searchBar">
-                <form>
+                <form action="/search/item_search" method="get">
                     <input type="text" placeholder="Search my Collection" />
                 </form>
             </div>
