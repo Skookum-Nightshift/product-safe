@@ -4,8 +4,12 @@ var CollectionHeader = React.createClass({
         <div className="container collectionHeader">
           <div className="row">
             <span>My Collection</span>
-            <SearchBar />
           </div>
+          <div className="searchBar">
+                <form>
+                    <input type="text" placeholder="Search my Collection" />
+                </form>
+            </div>
         </div>
       )
   }

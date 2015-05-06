@@ -12,13 +12,13 @@ class SearchController < ApplicationController
 
     response = request.item_lookup(
       query: {
-        'ItemId' => '076243631X',
+        'ItemId' => "#{item.barcode}",
         'IdType' => 'ISBN',
         'SearchIndex' => 'All'
       }
     )
 
-    item.name = response.to_h["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Name"] ? response.to_h["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Name"] : response.to_h["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Title"]
+    item.name = response.to_h["ItemLookupResponse"]["Items"]["Item"]["ItemAttributes"]["Title"]
 
       
   end

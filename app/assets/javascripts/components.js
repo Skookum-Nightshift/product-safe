@@ -2,12 +2,9 @@
 //= require components/loading_view
 //= require components/my_safe
 //= require components/collection_page
-//= require components/expiration_flag
-//= require components/item_information
 //= require components/collection_body
 //= require components/collection_item
 //= require components/collection_row
 //= require components/collection_header
 //= require components/sidebar
-//= require components/search_bar
 //= require components/nav_item

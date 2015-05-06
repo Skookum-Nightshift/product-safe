@@ -4,8 +4,7 @@ var CollectionRow = React.createClass({
     return (
         <div className="row collectionRow">
           <CollectionItem items={items}/>
-          <CollectionItem />
-          <CollectionItem />
+
         </div>
       )
   }
