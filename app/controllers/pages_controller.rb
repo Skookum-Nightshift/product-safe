@@ -4,9 +4,13 @@ class PagesController < ApplicationController
   after_action :allow_iframe
 
   def index
-    @component_name = "MySafe"
-    @url = "/"
-    @api_url = "/api/pages/home"
+    if user_signed_in?
+      @component_name = "MySafe"
+      @url = "/"
+      @api_url = "/api/pages/home"
+    else
+      redirect_to '/users/sign_in'
+    end
   end
 
   # def item
