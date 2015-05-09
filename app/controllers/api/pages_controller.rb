@@ -1,19 +1,11 @@
-class PagesController < ApplicationController
+class Api::PagesController < ApplicationController
   rescue_from ActionController::UnknownFormat, with: :raise_not_found
-  rescue_from ActionView::MissingTemplate do render '/generic_page' end
-  after_action :allow_iframe
 
-  def index
-    @component_name = "MySafe"
-    @url = "/"
-    @api_url = "/api/pages/home"
+  def home
+    items = Item.all
+
+    render json: { items: items }
   end
-
-  # def item
-  #   @component_name = "MyItemView"
-  #   @url = "/item/#{params[:id]}"
-  #   @api_url = "/api/item/#{params[:id]}"
-  # end
 
   def not_found
     respond_to do |format|

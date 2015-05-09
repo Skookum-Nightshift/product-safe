@@ -3,14 +3,10 @@ var MySafe = React.createClass({
     var items = this.props.items;
     return (
       <div className="row mySafe">
-        <h2>SideBar:</h2>
-        <SideBar />
-        <CollectionPage items={items} />
+        <CollectionPage items={items} openLink={this.props.openLink} />
       </div>
-      )
+    );
   }
 });
-
-
 
 window.MySafe = MySafe;
