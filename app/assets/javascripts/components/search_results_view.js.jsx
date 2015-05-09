@@ -18,6 +18,13 @@ var SearchResultsView = React.createClass({
     $(document).unbind("scroll", this.watchScroll);
   },
 
+  selectItem: function(item) {
+    var self = this;
+    csrfPost('api/products/add', { item: item }, function() {
+      self.props.openLink('MySafe', '/', '/api/pages/home');
+    });
+  },
+
   watchScroll: function(event) {
     var self = this;
     var target = $(document),
@@ -40,23 +47,26 @@ var SearchResultsView = React.createClass({
     var page = this.state.page+1;
     var self = this;
     this.setState({ page: page }, function(){
-      csrfGet('api/search/', { page: page, search_term: this.props.searchTerm }, function(data) {
-        var items = self.state.items;
-        for(var i=0; i < data.items.length; i++) {
-          items.push(data.items[i]);
+      csrfGet('api/search/', { page: page, search_term: this.props.searchTerm },
+        function(data) {
+          var items = self.state.items;
+          for(var i=0; i < data.items.length; i++) {
+            items.push(data.items[i]);
+          }
+          self.setState({ items: items, gettingMoreItems: false });
+        },
+        function(){
+          self.setState({page: self.state.page-1, gettingMoreItems: false });
         }
-        console.log(items);
-        self.setState({ items: items, gettingMoreItems: false });
-      }, function(){
-        self.setState({page: self.state.page-1, gettingMoreItems: false });
-      });
+      );
     });
 
   },
 
   render: function() {
     return (
-      <CollectionBody items={this.state.items} onScroll={this.watchScroll} />
+      <CollectionBody items={this.state.items} onScroll={this.watchScroll}
+        onSelect={this.selectItem} />
     );
   }
 });

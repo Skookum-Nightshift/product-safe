@@ -13,7 +13,7 @@ var CollectionHeader = React.createClass({
 
   handleSubmit: function(e) {
     if (e.keyCode === 13) {
-      this.props.openLink('SearchResultsView', '/', '/api/search',
+      this.props.openLink('SearchResultsView', '/search', '/api/search',
         { search_term: this.state.searchTerm });
     }
   },

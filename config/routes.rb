@@ -12,7 +12,13 @@ Rails.application.routes.draw do
     scope :search do
       get '/', to: 'search#find_all_where'
     end
+
+    scope :products do
+      post '/add', to: 'products#add'
+    end
   end
+
+  get '/search', to: 'pages#index'
 
   get '*any', to: 'pages#not_found'
   root 'pages#index'

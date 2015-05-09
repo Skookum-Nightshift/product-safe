@@ -1,8 +1,8 @@
 var CollectionBody = React.createClass({
   render: function(){
     var items = this.props.items.map(function(item) {
-      return <CollectionItem item={item} />;
-    });
+      return <CollectionItem item={item} onSelect={this.props.onSelect} />;
+    }, this);
 
     return (
         <div className="container collectionBody">

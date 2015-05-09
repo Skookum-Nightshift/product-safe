@@ -2,7 +2,7 @@ class Api::PagesController < ApplicationController
   rescue_from ActionController::UnknownFormat, with: :raise_not_found
 
   def home
-    items = Item.all
+    items = current_user.items
 
     render json: { items: items }
   end

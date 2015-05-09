@@ -1,4 +1,9 @@
 var CollectionItem = React.createClass({
+
+  onSelect: function() {
+    this.props.onSelect(this.props.item);
+  },
+
   render: function(){
     var item = this.props.item,
         name = item.name? item.name : item.ItemAttributes.Title,
@@ -11,6 +16,13 @@ var CollectionItem = React.createClass({
           <a href="#">{item.caption}</a>
         </div>
       );
+    } else {
+      caption = (
+        <div className="caption" style={{ cursor: 'pointer' }}
+          onClick={this.onSelect}>
+          Add to vault
+        </div>
+      )
     }
 
     return (
