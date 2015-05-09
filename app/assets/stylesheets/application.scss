@@ -8,10 +8,21 @@
 @import "pages";
 @import "loading_view";
 
+body{
+  background: #1f2427;
+}
+
+h2, .h2{
+  color: white;
+}
+
 .item {
-  margin: 0;
+  margin: 8px;
   padding: 0;
-  background: url("http://placegant.me/pg/300/300");
+  height: 210px;
+  background: #fff;
+  overflow:hidden;
+
 }
 
 .border {
@@ -40,13 +51,20 @@
 
 .info {
   position: absolute;
-  background-color: rgba(0,0,0,0.5);
-  color: white;
+  background-color: rgba(255,255,255,0.75);
+  color: #212121;
   padding: 5px 10px 5px 10px;
   bottom: 0;
   width: 100%;
   height: 20%;
 
+}
+
+.info a{
+  margin-top: 13px;
+  display: block;
+  font-size: 16px;
+  color: #212121;
 }
 
 .header {
@@ -59,4 +77,55 @@
   height: 65px;
   width: 100%;
   background-color: white;
+}
+
+.item img{
+  width: 100%;
+}
+
+input{
+  width: 250px;
+height: 50px;
+background: none;
+border: none;
+border-bottom: 1px solid white;
+color: white !important;
+float: right;
+outline:none;
+}
+
+input:focus input:visited{
+  border:none;
+  outline:none;
+}
+
+.collectionHeader span{
+  color: white;
+  font-size: 31px;
+
+}
+
+.collectionHeader{
+  max-width: 90%;
+
+}
+
+.expirationFlag{
+  background: #66bb6a;
+  color: white;
+}
+
+.expirationFlag a{
+  color: white;
+
+}
+
+
+.nav-sidebar {
+background: #259af7;
+color: white;
+}
+
+.nav-sidebar a{
+  color: white;
 }
