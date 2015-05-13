@@ -14,6 +14,8 @@ body{
 
 h2, .h2{
   color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .item {
@@ -128,4 +130,123 @@ color: white;
 
 .nav-sidebar a{
   color: white;
+}
+
+.col-sm-3{
+  background: #259af7;
+  height: 1080px;
+  width: 250px;
+}
+
+.container{
+  margin-left: 0px;
+}
+
+.col-md-10{
+  width: 78.3333%;
+}
+
+
+.new_user{
+  margin: 0 auto;
+  width: 550px;
+}
+
+.new_user input[type=submit]{
+
+  width: 432px;
+  height: 78px;
+  background: #2196f3;
+  border:0px;
+  border-radius: 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-right: 55px;
+}
+
+.new_user input[type=submit]:hover{
+  background: #1E88E5;
+}
+
+.new_user .field{
+  height: 61px;
+  width: 550px;
+  background: #263238;
+  border: 1px solid #455a64;
+  color:white;
+  margin-bottom: 20px;
+}
+
+.new_user .field label{
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: normal;
+  float:left;
+}
+
+#user_email{
+
+  border: medium none;
+  width: 380px;
+  margin-top: -16px;
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+  font-size: 25px;
+  font-weight: normal;
+  outline:none;
+  color: #90a4ae !important;
+}
+
+#user_password{
+
+  border: medium none;
+  width: 380px;
+  margin-top: -16px;
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+  font-size: 25px;
+  font-weight: normal;
+  outline:none;
+  color: #90a4ae !important;
+}
+
+#user_remember_me{
+  width: 20px;
+  margin-right: 10px;
+}
+
+[href="/users/sign_up"]{
+  display:block;
+  width: 432px;
+  height: 78px;
+  background: #66bb6a;
+  border:0px;
+  border-radius: 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-right: 55px;
+  color: white;
+  text-align:center;
+  position: relative;
+margin-left: 33.33333%;
+margin-top: 190px;
+padding-top: 18px;
+}
+
+[href="/users/sign_up"]:hover{
+  color:white;
+  text-decoration: none;
+  background: #4caf50;
+}
+
+[href="/users/sign_up"]:active{
+  color:white;
+  text-decoration: none;
+}
+[href="/users/sign_up"]:focus{
+  color:white;
+  text-decoration: none;
 }
