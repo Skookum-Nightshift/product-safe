@@ -4,7 +4,8 @@
 //= require components/collection_page
 //= require components/collection_body
 //= require components/collection_item
-//= require components/collection_row
 //= require components/collection_header
 //= require components/sidebar
 //= require components/nav_item
+//= require components/search_results_view
+//= require components/vault_core
