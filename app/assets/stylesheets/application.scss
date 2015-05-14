@@ -6,16 +6,17 @@
 @import "pnotify/pnotify.picon";
 
 @import "pages";
-@import "loading_view";
 
-body{
+body {
   background: #1f2427;
+  font-weight: 100;
 }
 
-h2, .h2{
+h2, .h2 {
   color: white;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 100;
 }
 
 .item {
@@ -24,7 +25,6 @@ h2, .h2{
   height: 210px;
   background: #fff;
   overflow:hidden;
-
 }
 
 .border {
@@ -62,191 +62,104 @@ h2, .h2{
 
 }
 
-.info a{
-  margin-top: 13px;
-  display: block;
-  font-size: 16px;
-  color: #212121;
-}
-
-.header {
-  width: 100%;
-  height: 65px;
-  background-color: darkgray;
-}
-
-.subheader {
-  height: 65px;
-  width: 100%;
-  background-color: white;
-}
-
 .item img{
   width: 100%;
 }
 
-input{
-  width: 250px;
-height: 50px;
-background: none;
-border: none;
-border-bottom: 1px solid white;
-color: white !important;
-float: right;
-outline:none;
+hr {
+  width: 50%;
 }
 
-input:focus input:visited{
-  border:none;
-  outline:none;
-}
-
-.collectionHeader span{
+.forgot-password {
+  text-align: center;
+  display: block;
   color: white;
-  font-size: 31px;
-
 }
 
-.collectionHeader{
-  max-width: 90%;
+.other-from-button {
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background: #4caf50;
+  }
 
-}
+  &:active, &:focus {
+    color: white;
+    text-decoration: none;
+  }
 
-.expirationFlag{
+  display: block;
+  width: 432px;
+  height: 78px;
   background: #66bb6a;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 28px;
+  text-transform: uppercase;
   color: white;
+  text-align: center;
+  padding-top: 18px;
+  margin: 0 auto;
 }
 
-.expirationFlag a{
-  color: white;
-
+.center-logo {
+  display: block;
+  margin: 0 auto;
+  width: 284px;
+  height: 249px;
 }
 
+.new_user {
+  input {
+    border: none;
+    font-size: 25px;
+    font-weight: 100;
+    outline: none;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 20px;
+  }
 
-.nav-sidebar {
-background: #259af7;
-color: white;
-}
+  .submit {
+    width: 432px;
+    height: 78px;
+    background: #2196f3;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    display: block;
+    color: #fff;
 
-.nav-sidebar a{
-  color: white;
-}
+    &:hover{
+      background: #1E88E5;
+    }
+  }
 
-.col-sm-3{
-  background: #259af7;
-  height: 1080px;
-  width: 250px;
-}
+  .field {
+    position: relative;
+    height: 61px;
+    width: 550px;
+    background: #263238;
+    border: 1px solid #455a64;
+    color: white;
+    margin-bottom: 20px;
 
-.container{
-  margin-left: 0px;
-}
+    label{
+      margin-left: 15px;
+      margin-top: 10px;
+      font-size: 25px;
+      font-weight: normal;
+      float: left;
+      font-weight: 100;
+    }
+  }
 
-.col-md-10{
-  width: 78.3333%;
-}
-
-
-.new_user{
   margin: 0 auto;
   width: 550px;
-}
-
-.new_user input[type=submit]{
-
-  width: 432px;
-  height: 78px;
-  background: #2196f3;
-  border:0px;
-  border-radius: 10px;
-  font-size: 28px;
-  text-transform: uppercase;
-  margin-right: 55px;
-}
-
-.new_user input[type=submit]:hover{
-  background: #1E88E5;
-}
-
-.new_user .field{
-  height: 61px;
-  width: 550px;
-  background: #263238;
-  border: 1px solid #455a64;
-  color:white;
-  margin-bottom: 20px;
-}
-
-.new_user .field label{
-  margin-left: 15px;
-  margin-top: 10px;
-  font-size: 25px;
-  font-weight: normal;
-  float:left;
-}
-
-#user_email{
-
-  border: medium none;
-  width: 380px;
-  margin-top: -16px;
-  float: right;
-  margin-right: 10px;
-  text-align: right;
-  font-size: 25px;
-  font-weight: normal;
-  outline:none;
-  color: #90a4ae !important;
-}
-
-#user_password{
-
-  border: medium none;
-  width: 380px;
-  margin-top: -16px;
-  float: right;
-  margin-right: 10px;
-  text-align: right;
-  font-size: 25px;
-  font-weight: normal;
-  outline:none;
-  color: #90a4ae !important;
-}
-
-#user_remember_me{
-  width: 20px;
-  margin-right: 10px;
-}
-
-[href="/users/sign_up"]{
-  display:block;
-  width: 432px;
-  height: 78px;
-  background: #66bb6a;
-  border:0px;
-  border-radius: 10px;
-  font-size: 28px;
-  text-transform: uppercase;
-  margin-right: 55px;
-  color: white;
-  text-align:center;
-  position: relative;
-margin-left: 33.33333%;
-margin-top: 190px;
-padding-top: 18px;
-}
-
-[href="/users/sign_up"]:hover{
-  color:white;
-  text-decoration: none;
-  background: #4caf50;
-}
-
-[href="/users/sign_up"]:active{
-  color:white;
-  text-decoration: none;
-}
-[href="/users/sign_up"]:focus{
-  color:white;
-  text-decoration: none;
 }
