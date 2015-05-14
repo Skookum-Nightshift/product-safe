@@ -27,6 +27,21 @@ class Api::SearchController < ApplicationController
     render json: { items: items, searchTerm: params[:search_term] }
   end
 
+  def find_users_item
+    items = Item.find_by_fuzzy_name(params[:search_term], :limit => 10)
+    
+    found_users_items = []
+    users_items_ids = Item.joins(:collection).where('collections.user_id', current_user.id).pluck(:id)
+
+    items.each do |item|
+      if !users_items_ids.index(item.id).nil?
+        found_users_items.push(item)
+      end
+    end
+
+    render json: { items: found_users_items, searchTerm: params[:search_term] }
+  end
+
   private
 
     def item_search(item_id)

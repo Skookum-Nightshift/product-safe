@@ -9,3 +9,4 @@
 //= require components/nav_item
 //= require components/search_results_view
 //= require components/vault_core
+//= require components/add_item_view

@@ -13,6 +13,16 @@ class PagesController < ApplicationController
     end
   end
 
+  def add
+    if user_signed_in?
+      @component_name = "AddItemView"
+      @url = "/add"
+      @api_url = "/api/pages/add"
+    else
+      redirect_to '/users/sign_in'
+    end
+  end
+
   # def item
   #   @component_name = "MyItemView"
   #   @url = "/item/#{params[:id]}"

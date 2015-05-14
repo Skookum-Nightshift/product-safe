@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 ruby "2.2.0"
 
+
 gem 'vacuum'
 gem 'multi_xml', '~> 0.5.5'
 gem 'jeff', '~> 1.3.0'
@@ -15,7 +16,7 @@ gem "carrierwave" # Great File upload
 gem 'devise' # Great Login
 gem "fog" # Upload to cloud storage
 gem "font-awesome-sass"
-# gem fuzzily # Good simple indexing
+gem 'fuzzily' # Good simple indexing
 gem "mini_magick" # For Img uploads
 gem "modernizr-rails"
 gem "nested_form"

@@ -13,7 +13,7 @@ var CollectionHeader = React.createClass({
 
   handleSubmit: function(e) {
     if (e.keyCode === 13) {
-      this.props.openLink('SearchResultsView', '/search', '/api/search',
+      this.props.openLink('SearchResultsView', '/search', '/api/search/users/items',
         { search_term: this.state.searchTerm });
     }
   },
@@ -22,7 +22,6 @@ var CollectionHeader = React.createClass({
     return (
       <div className="container collectionHeader">
         <div className="row">
-          <span>My Collection</span>
         </div>
         <div className="searchBar">
           <input type="text" placeholder="Search my Collection" ref="searchInput"

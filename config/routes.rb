@@ -4,17 +4,16 @@ Rails.application.routes.draw do
 
   resources :collections
 
-<<<<<<< HEAD
-  get 'search/item_search', to: 'search#item_search'
-=======
+
   namespace :api do
     scope :pages do
       get '/home', to: 'pages#home'
+      get '/add', to: 'pages#add'
     end
->>>>>>> 13e8e86490d02baaab77df645b95ba4f231c8c4a
 
     scope :search do
       get '/', to: 'search#find_all_where'
+      get '/users/items', to: 'search#find_users_item'
     end
 
     scope :products do
@@ -23,6 +22,7 @@ Rails.application.routes.draw do
   end
 
   get '/search', to: 'pages#index'
+  get '/add', to: 'pages#add'
 
   get '*any', to: 'pages#not_found'
   root 'pages#index'
