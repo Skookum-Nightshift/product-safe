@@ -20,9 +20,8 @@ var CollectionHeader = React.createClass({
 
   render: function(){
     return (
-      <div className="container collectionHeader">
-        <div className="row">
-        </div>
+      <div className="collectionHeader row">
+        <div className="collectionHeader-title">My Collection</div>
         <div className="searchBar">
           <input type="text" placeholder="Search my Collection" ref="searchInput"
             onChange={this.updateSearchTerm} onKeyDown={this.handleSubmit} />

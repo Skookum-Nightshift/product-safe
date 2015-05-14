@@ -1,3 +1,53 @@
+.core-sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #2095F2;
+
+  .side-logo {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.content {
+  width: 100vw;
+  padding-left: 275px;
+}
+
+.collectionHeader {
+  color: #FFF;
+  width: 100%;
+  position: relative;
+
+  .collectionHeader-title {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 28px;
+    font-weight: 100;
+  }
+
+  .searchBar {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    input {
+      background: transparent;
+      color: #FFF;
+      border: none;
+      border-bottom: 1px solid darkgrey;
+      outline: none;
+    }
+  }
+}
+
+
 /* Smartphones (portrait and landscape) */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 /* Styles */

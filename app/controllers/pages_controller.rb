@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def index
     if user_signed_in?
+      @whiteLogo = view_context.image_url("Vault-Web-White.svg")
       @component_name = "MySafe"
       @url = "/"
       @api_url = "/api/pages/home"
@@ -15,6 +16,7 @@ class PagesController < ApplicationController
 
   def add
     if user_signed_in?
+      @whiteLogo = view_context.image_url("Vault-Web-White.svg")
       @component_name = "AddItemView"
       @url = "/add"
       @api_url = "/api/pages/add"
