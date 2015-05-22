@@ -1,8 +1,8 @@
 var SideBar = React.createClass({
   render: function(){
     return (
-        <div className="col-sm-3 col-md-2" role="navigation">
-
+        <div className="core-sidebar" role="navigation">
+            <img src={this.props.logo} className="side-logo" />
             <ul className="nav nav-sidebar">
               <NavItem title="LINK" link='#' realLink={true}  />
             </ul>

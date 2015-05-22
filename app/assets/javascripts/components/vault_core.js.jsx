@@ -55,9 +55,9 @@ var VaultCore = React.createClass({
   render: function() {
     return (
       <div className='vault-core'>
-        <SideBar />
-        <CollectionHeader openLink={this.goToPage} />
+        <SideBar logo={this.props.whiteLogo} />
         <div className='content'>
+          <CollectionHeader openLink={this.goToPage} />
           {this.state.content}
         </div>
       </div>
