@@ -1,5 +1,5 @@
 var CollectionHeader = React.createClass({
-  getInitailState: function() {
+  getInitialState: function() {
     return {
       searchTerm: ""
     };
@@ -21,7 +21,7 @@ var CollectionHeader = React.createClass({
   render: function(){
     return (
       <div className="collectionHeader row">
-        <div className="collectionHeader-title">My Collection</div>
+        <div className="collectionHeader-title"><a href="/">My Collection</a></div>
         <div className="searchBar">
           <input type="text" placeholder="Search my Collection" ref="searchInput"
             onChange={this.updateSearchTerm} onKeyDown={this.handleSubmit} />
